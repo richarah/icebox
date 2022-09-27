@@ -1,9 +1,12 @@
 #!/bin/sh
 
-mkdir build
-cd build
-wget https://github.com/richarah/icecream/releases/download/testing/icecream.tar.xz
-tar -xJvf icecream.tar.xz
-make install
+git clone https://github.com/richarah/icecream
+cd icecream
+libtoolize
+autoreconf
+automake --add-missing
+./configure
+make -j$(nproc)
+make -j$(nproc) install
 cd ..
-rm -rf build
+rm -rf icecream
