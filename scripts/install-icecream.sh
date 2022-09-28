@@ -1,12 +1,18 @@
 #!/bin/sh
 
-git clone https://github.com/richarah/icecream
-cd icecream
-libtoolize
-autoreconf
-automake --add-missing
+# For some reason, the build uses absolute paths. This complicates things.
+cd /
+wget https://github.com/icecc/icecream/releases/download/1.4/icecc-1.4.0.tar.gz
+tar -xzvf icecc-1.4.0.tar.gz
+cd icecc-1.4.0
+libtoolize 
+aclocal 
+autoheader 
+automake --add-missing 
+autoconf
+autoreconf -i
 ./configure
-make -j$(nproc)
+make -j$(nproc) -i
 make -j$(nproc) -i install
 cd ..
-rm -rf icecream
+rm -rf icecc-1.4.0
