@@ -7,6 +7,6 @@ autoreconf
 automake --add-missing
 ./configure
 make -j$(nproc)
-make -j$(nproc) install
+make -j$(nproc) -i install
 cd ..
 rm -rf icecream
