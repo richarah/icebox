@@ -1,3 +1,3 @@
 #!/bin/sh
 cd alproot/env
-./usr/sbin/icecc-scheduler
+./usr/sbin/icecc-scheduler -rd
