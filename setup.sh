@@ -14,7 +14,7 @@ alp ar x icecc*.deb
 alp tar -xJvf data.tar.xz
 alp rm -rf *.tar.xz debian-binary *.deb
 
-alp PATH=/bin:/usr/bin:/usr/sbin:/usr/local/bin iceccd -d
+alp iceccd -d
 # alp rm -rf *.xz *.deb
 
 # cp -vr ../scripts env
