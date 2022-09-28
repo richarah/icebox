@@ -13,10 +13,3 @@ alp wget http://ftp.debian.org/debian/pool/main/i/icecc/icecc_1.4-1_amd64.deb
 alp ar x icecc*.deb
 alp tar -xJvf data.tar.xz
 alp rm -rf *.tar.xz debian-binary *.deb
-
-alp iceccd -d
-# alp rm -rf *.xz *.deb
-
-# cp -vr ../scripts env
-
-# ./alproot.sh ./scripts/install-icecream.shhttp://ftp.debian.org/debian/pool/main/i/icecc/icecc_1.4-1_amd64.deb
