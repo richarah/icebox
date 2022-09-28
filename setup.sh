@@ -1,6 +1,6 @@
 #!/bin/sh
 
-alias alp="./alproot.sh"
+alias alp="./alproot.sh -b /tmp "
 
 # Setup Alproot env
 cd alproot 
